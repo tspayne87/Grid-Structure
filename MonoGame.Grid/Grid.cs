@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace Grid.Structure
+namespace MonoGame.Grid
 {
   public class Grid<TValue> : IGrid<TValue>
   {

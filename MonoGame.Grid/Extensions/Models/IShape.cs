@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Grid.Structure.Extensions
+namespace MonoGame.Grid.Extensions
 {
   /// <summary>
   /// The shape we are searching for when looking on a grid

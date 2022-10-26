@@ -1,7 +1,7 @@
-﻿using Grid.Structure.Extensions;
+﻿using MonoGame.Grid.Extensions;
 using Microsoft.Xna.Framework;
 
-namespace Grid.Structure.Test.Shapes
+namespace MonoGame.Grid.Test.Shapes
 {
   internal class LineShape : IShape<string>
   {

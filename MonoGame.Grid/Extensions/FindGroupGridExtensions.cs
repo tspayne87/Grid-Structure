@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Runtime.InteropServices;
 
-namespace Grid.Structure.Extensions
+namespace MonoGame.Grid.Extensions
 {
   public static class FindGroupGridExtensions
   {

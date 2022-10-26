@@ -32,8 +32,8 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal --configuration Release
     - name: Pack
-      run: dotnet pack Grid.Structure/Grid.Structure.csproj --no-build --output dist --configuration Release
+      run: dotnet pack MonoGame.Grid/MonoGame.Grid.csproj --no-build --output dist --configuration Release
     - name: Push
-      run: dotnet nuget push dist/Grid.Structure.${VERSION}.nupkg --api-key ${API_KEY} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push dist/MonoGame.Grid.${VERSION}.nupkg --api-key ${API_KEY} --source https://api.nuget.org/v3/index.json
       env:
         API_KEY: ${{ secrets.API_KEY }}

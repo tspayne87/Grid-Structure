@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.Structure", "Grid.Structure\Grid.Structure.csproj", "{2650E3E8-95DF-4F78-9CD2-E12F406D7E50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Grid", "MonoGame.Grid\MonoGame.Grid.csproj", "{2650E3E8-95DF-4F78-9CD2-E12F406D7E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.Structure.Test", "Grid.Structure.Test\Grid.Structure.Test.csproj", "{18B98AF6-4148-4428-9C9E-24D3EC6B370F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGame.Grid.Test", "MonoGame.Grid.Test\MonoGame.Grid.Test.csproj", "{18B98AF6-4148-4428-9C9E-24D3EC6B370F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

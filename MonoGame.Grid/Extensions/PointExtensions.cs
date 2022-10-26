@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Grid.Structure.Extensions
+namespace MonoGame.Grid.Extensions
 {
   public static class PointExtensions
   {

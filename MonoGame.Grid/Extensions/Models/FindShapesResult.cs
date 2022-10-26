@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Grid.Structure.Extensions
+namespace MonoGame.Grid.Extensions
 {
   /// <summary>
   /// Result object meant to group results together to give information on what shapes were found

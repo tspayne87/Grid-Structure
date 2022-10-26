@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <PackageId>Grid.Structure</PackageId>
+    <PackageId>MonoGame.Grid</PackageId>
     <Authors>Terry Payne</Authors>
     <Company>Terry Payne</Company>
     <RepositoryType>git</RepositoryType>

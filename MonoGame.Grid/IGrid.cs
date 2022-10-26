@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grid.Structure
+namespace MonoGame.Grid
 {
   /// <summary>
   /// Grid interface meant to create a grid type object

@@ -1,7 +1,7 @@
-using Grid.Structure.Extensions;
-using Grid.Structure.Test.Shapes;
+using MonoGame.Grid.Extensions;
+using MonoGame.Grid.Test.Shapes;
 
-namespace Grid.Structure.Test
+namespace MonoGame.Grid.Test
 {
   public class GridTests
   {

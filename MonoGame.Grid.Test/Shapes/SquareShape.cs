@@ -1,4 +1,4 @@
-﻿using Grid.Structure.Extensions;
+﻿using MonoGame.Grid.Extensions;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grid.Structure.Test.Shapes
+namespace MonoGame.Grid.Test.Shapes
 {
   internal class SquareShape : IShape<string>
   {
