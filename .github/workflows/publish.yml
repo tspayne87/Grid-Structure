@@ -30,7 +30,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore --configuration Release /p:Version=${VERSION}
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --configuration Release
     - name: Pack
       run: dotnet pack Grid.Structure/Grid.Structure.csproj --no-build --output dist --configuration Release
     - name: Push
