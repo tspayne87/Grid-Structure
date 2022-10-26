@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <PackageId>Grid.Structure</PackageId>
+    <Authors>Terry Payne</Authors>
+    <Company>Terry Payne</Company>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/tspayne87/Grid-Structure</RepositoryUrl>
+    <PackageLicense>http://opensource.org/licenses/MS-PL</PackageLicense>
+    <PackageProjectUrl>https://github.com/tspayne87/Grid-Structure</PackageProjectUrl>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
