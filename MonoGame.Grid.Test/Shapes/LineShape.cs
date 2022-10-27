@@ -3,15 +3,15 @@ using Microsoft.Xna.Framework;
 
 namespace MonoGame.Grid.Test.Shapes
 {
-  internal class LineShape : IShape<string>
+  internal class LineShape : IShape<string, string>
   {
     private int _size = 2;
 
     /// <inheritdoc />
-    public string Name => "line";
+    public string Type => "line";
 
     /// <inheritdoc />
-    public List<Point>? HasShapeOnPoint(Point point, Grid<string> grid)
+    public List<Point>? HasShapeOnPoint(Point point, IGrid<string> grid)
     {
       var checks = new List<List<Point>>();
       if (point.X + _size < grid.Width)

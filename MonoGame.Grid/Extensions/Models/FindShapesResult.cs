@@ -5,12 +5,12 @@ namespace MonoGame.Grid.Extensions
   /// <summary>
   /// Result object meant to group results together to give information on what shapes were found
   /// </summary>
-  public sealed class FindShapesResult
+  public sealed class FindShapesResult<TShapeType>
   {
     /// <summary>
-    /// The name of the of the shape that was found
+    /// The type of shape that was found
     /// </summary>
-    public string Name { get; set; }
+    public TShapeType Type { get; set; }
 
     /// <summary>
     /// The points on the grid that make up the shape
@@ -20,11 +20,11 @@ namespace MonoGame.Grid.Extensions
     /// <summary>
     /// Will create a find result that specifies what type of shape was found during the search
     /// </summary>
-    /// <param name="name">The name of the of the shape that was found</param>
+    /// <param name="type">The type of shape that was found</param>
     /// <param name="points">The points on the grid that make up the shape</param>
-    internal FindShapesResult(string name, List<Point> points)
+    internal FindShapesResult(TShapeType type, List<Point> points)
     {
-      Name = name;
+      Type = type;
       Points = points;
     }
   }

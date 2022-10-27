@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace MonoGame.Grid.Test.Shapes
 {
-  internal class SquareShape : IShape<string>
+  internal class SquareShape : IShape<string, string>
   {
     private Point[] _checks = new Point[] { new Point(0, 0), new Point(0, 1), new Point(1, 0), new Point(1, 1) };
 
     /// <inheritdoc />
-    public string Name => "square";
+    public string Type => "square";
 
     /// <inheritdoc />
-    public List<Point>? HasShapeOnPoint(Point point, Grid<string> grid)
+    public List<Point>? HasShapeOnPoint(Point point, IGrid<string> grid)
     {
       foreach(var check in _checks)
         if (!grid.Contains(check + point) || grid[check + point] != "X")

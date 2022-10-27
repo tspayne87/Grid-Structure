@@ -3,18 +3,19 @@ using System.Runtime.InteropServices;
 
 namespace MonoGame.Grid.Extensions
 {
-  public static class FindGroupGridExtensions
+  public static class FindShapesIGridExtensions
   {
     /// <summary>
     /// Method is meant to find all shapes in a grid
     /// </summary>
     /// <typeparam name="TValue">The type of object that is stored in the grid</typeparam>
+    /// <typeparam name="TType">The type of the shapes being given</typeparam>
     /// <param name="grid">The grid we are finding shapes in</param>
     /// <param name="shapes">The shapes we are looking for</param>
     /// <returns>Will return a list of shape results found in the grid</returns>
-    public static List<FindShapesResult> FindShapes<TValue>(this Grid<TValue> grid, List<IShape<TValue>> shapes)
+    public static List<FindShapesResult<TType>> FindShapes<TValue, TType>(this IGrid<TValue> grid, params IShape<TValue, TType>[] shapes)
     {
-      var result = new List<FindShapesResult>();
+      var result = new List<FindShapesResult<TType>>();
 
       var foundGrid = new Grid<bool>(grid.Width, grid.Height);
       var span = grid.AsSpan();
@@ -32,7 +33,7 @@ namespace MonoGame.Grid.Extensions
           {
             foreach (var x in CollectionsMarshal.AsSpan(points))
               foundGrid[x] = true;
-            result.Add(new FindShapesResult(shape.Name, points));
+            result.Add(new FindShapesResult<TType>(shape.Type, points));
           }
         }
       }

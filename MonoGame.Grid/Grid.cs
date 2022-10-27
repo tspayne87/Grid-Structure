@@ -9,7 +9,7 @@ namespace MonoGame.Grid
     /// <summary>
     /// Internal grid meant to store the items for the grid
     /// </summary>
-    private TValue[] _grid;
+    private TValue?[] _grid;
 
     /// <inheritdoc />
     public int Width { get; private set; }
@@ -25,7 +25,7 @@ namespace MonoGame.Grid
     public Grid(int width, int height)
     {
       if (width <= 0 || height <= 0) throw new IndexOutOfRangeException();
-      _grid = new TValue[width * height];
+      _grid = new TValue?[width * height];
 
       Width = width;
       Height = height;
@@ -38,11 +38,11 @@ namespace MonoGame.Grid
     {
       Width = 0;
       Height = 0;
-      _grid = new TValue[0];
+      _grid = new TValue?[0];
     }
 
     /// <inheritdoc />
-    public TValue this[int x, int y]
+    public TValue? this[int x, int y]
     {
       get
       {
@@ -60,27 +60,27 @@ namespace MonoGame.Grid
     }
 
     /// <inheritdoc />
-    public TValue this[int i]
+    public TValue? this[int i]
     {
       get => _grid[i];
       set => _grid[i] = value;
     }
 
     /// <inheritdoc />
-    public TValue this[Point point]
+    public TValue? this[Point point]
     {
       get => this[point.X, point.Y];
       set => this[point.X, point.Y] = value;
     }
 
     /// <inheritdoc />
-    public ReadOnlySpan<TValue> AsSpan()
+    public ReadOnlySpan<TValue?> AsSpan()
     {
-      return new ReadOnlySpan<TValue>(_grid);
+      return new ReadOnlySpan<TValue?>(_grid);
     }
 
     /// <inheritdoc />
-    public void Add(params TValue[] items)
+    public void Add(params TValue?[] items)
     {
       if (_grid.Length == 0) // We only worry about the first item added to calculate the width
         Width = items.Length;
@@ -92,13 +92,19 @@ namespace MonoGame.Grid
     }
 
     /// <inheritdoc />
+    public void Clear()
+    {
+      _grid = new TValue?[Width * Height];
+    }
+
+    /// <inheritdoc />
     public bool Contains(Point point)
     {
       return Width > point.X && point.X >= 0 && Height > point.Y && point.Y >= 0;
     }
 
     /// <inheritdoc />
-    public IEnumerator<TValue> GetEnumerator()
+    public IEnumerator<TValue?> GetEnumerator()
     {
       return _grid.AsEnumerable().GetEnumerator();
     }
