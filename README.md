@@ -28,7 +28,9 @@ to a match three game.
 
   var item1 = grid[1, 2]; // -- "X"
   var item2 = grid[3]; // Is equal to 1, 0 which will return "O";
-  var item3 = grid[new Point(1, 2)] // Will use the monogame point structure and will use the x and y like above which will return "X"
+  var item3 = grid[new Point(1, 2)] // Will use the monogame point structure
+                                    // and will use the x and y like above which
+                                    // will return "X"
 ```
 
 ## 
