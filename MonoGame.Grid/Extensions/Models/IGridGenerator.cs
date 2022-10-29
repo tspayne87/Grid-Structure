@@ -28,6 +28,14 @@
     public IGridGenerator<TValue> OverwriteNoneNulls();
 
     /// <summary>
+    /// Sets the empty value that should be used when determing if we need to fill this
+    /// value in the grid or not
+    /// </summary>
+    /// <param name="value">The value we want to use as the empty value</param>
+    /// <returns>Will return the generator for chaining</returns>
+    public IGridGenerator<TValue> EmptyValue(TValue value);
+
+    /// <summary>
     /// Will generate the grid with values
     /// </summary>
     public void Generate();

@@ -22,6 +22,11 @@
     private Func<TValue>? _randomGetter;
 
     /// <summary>
+    /// The empty value we want to use when determining if the value should be filled
+    /// </summary>
+    private TValue? _emptyValue;
+
+    /// <summary>
     /// Builds the generator constructor to fill a grid in
     /// </summary>
     /// <param name="grid">The current grid we are filling in</param>
@@ -30,6 +35,7 @@
       _grid = grid;
       _shapesToAvoid = new List<IBaseShape<TValue>>();
       _randomGetter = null;
+      _emptyValue = default;
     }
 
     /// <inheritdoc />
@@ -41,7 +47,7 @@
       var span = _grid.AsSpan();
       for (var i = span.Length - 1; i >=0; --i)
       {
-        if (span[i] == null)
+        if ((span[i] == null && _emptyValue == null) || span[i]?.Equals(_emptyValue) == true)
         {
           var point = i.ToPoint(_grid.Width);
 
@@ -65,6 +71,13 @@
     public IGridGenerator<TValue> OverwriteNoneNulls()
     {
       _grid.Clear();
+      return this;
+    }
+
+    /// <inheritdoc />
+    public IGridGenerator<TValue> EmptyValue(TValue value)
+    {
+      _emptyValue = value;
       return this;
     }
 
